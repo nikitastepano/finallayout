@@ -1,0 +1,121 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-400px);
+    background-color: white;
+
+
+    
+    &-header {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__logo {
+            display: flex;
+            gap: 16px;
+            align-items: inherit;
+            a {
+                width: 100px;
+                height: 50px;
+                img {
+                width: 100px;
+                height: 50px;
+                }
+            }
+        }
+    }
+
+
+
+    &-main {
+        flex: 1 1 auto;
+        &__list {
+            padding: 0;
+            padding-top: 16px;
+            padding-left: 16px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        &__item {
+            list-style: none;
+            &:hover::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                transform: translateY(-5px);
+                width: 4px;
+                height: 32px;
+                border-radius: 10px;
+                background-color: turquoise;
+            }
+        }
+        &__link {
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+
+
+    &-footer {
+        padding-bottom: 32px;
+        padding-left: 16px;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        &__nav {
+            display: flex;
+            gap: 16px;
+        }
+        &__link {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        &__link__language {
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 360px) {
+    .menu {
+        width: 360px;
+    }
+  }
+  
+
+
+  @media screen and (min-width: 768px) {
+    .menu {
+        width: 320px;
+        box-shadow: 20px 0px 40px 0px rgba(10, 20, 80, 0.2);
+    }
+  }
+  
+
+  
+  @media screen and (min-width: 1440px) {
+    .menu {
+        position: sticky;
+        min-width: 310px;
+        transform: translateX(0);
+        box-shadow: none;
+    }
+  }
+  

@@ -1,0 +1,114 @@
+.feedback {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(200%);
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 2000;
+
+
+
+    &-header {
+        padding-top: 16px;
+        padding-left: 16px;
+        &__heading {
+            padding-top: 16px;
+            margin: 0;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                transform: translateY(-4px);
+                width: 4px;
+                height: 40px;
+                 background-color: turquoise;
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+
+    &__form {
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+
+
+.call {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(200%);
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 2000;
+
+
+    &-header {
+        padding-top: 16px;
+        padding-left: 16px;
+        &__heading {
+            padding-top: 16px;
+            margin: 0;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                transform: translateY(-4px);
+                width: 4px;
+                height: 40px;
+                 background-color: turquoise;
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+    
+    &__form {
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    .feedback {
+        width: 440px;
+        border-left: 1px solid turquoise;
+        &-header {
+            &__heading {
+                padding-top: 4px;
+            }
+        }
+    }
+
+
+
+    .call {
+        width: 440px;
+        border-left: 1px solid turquoise;
+        &-header {
+            &__heading {
+                padding-top: 4px;
+            }
+        }
+    }
+}
